@@ -1,1 +1,13 @@
-# spam-email-detector
+# Spam Email Detector
+
+## Setup
+pip install -r requirements.txt
+
+## Train
+python src/train.py
+
+## Test
+pytest
+
+## Predict
+python src/predict.py
