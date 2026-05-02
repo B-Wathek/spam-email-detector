@@ -1,4 +1,4 @@
-# Spam Email Detector
+# Spam Email Detector PR
 
 ## Setup
 pip install -r requirements.txt
