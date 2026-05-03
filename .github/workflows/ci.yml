@@ -22,8 +22,8 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run all tests (unit + data contract)
+    - name: Run all tests
       run: PYTHONPATH=. pytest
 
-    - name: Run evaluation gate (HW4)
+    - name: Run evaluation gate
       run: PYTHONPATH=. python pipelines/eval_pipeline.py
