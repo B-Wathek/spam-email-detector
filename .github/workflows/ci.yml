@@ -26,4 +26,4 @@ jobs:
       run: PYTHONPATH=. pytest
 
     - name: Run evaluation gate (HW4)
-      run: PYTHONPATH=. python pipelines/eval.py
+      run: PYTHONPATH=. python pipelines/eval_pipeline.py
