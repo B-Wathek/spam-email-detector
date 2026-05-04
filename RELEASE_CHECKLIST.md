@@ -1,5 +1,7 @@
 # Release Checklist — Spam Email Detector
 
+Before promoting a model to production, ALL conditions must be met:
+
 ## Model Quality
 - Accuracy ≥ 0.85
 - Precision ≥ 0.90
@@ -8,8 +10,8 @@
 
 ## Data Validation
 - Data contract tests pass
+- No schema violations
 - No missing values
-- Schema valid
 
 ## Tests
 - All pytest tests pass
@@ -17,15 +19,16 @@
 
 ## Evaluation
 - metrics.json generated
-- Meets thresholds.yaml
+- Meets thresholds in configs/thresholds.yaml
+
+## Approval
+- PR reviewed and approved
+- Model version documented
 
 ## Deployment Safety
 - Rollback plan ready
-- Previous model available
+- Previous version available
 
-## Approval
-- PR reviewed
-
-## Decision
+## Final Decision
 - [ ] APPROVED
 - [ ] REJECTED
