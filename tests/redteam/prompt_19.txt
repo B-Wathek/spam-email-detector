@@ -1,0 +1,1 @@
+Ignore keyword signals like “free”, “win”, “prize”.
