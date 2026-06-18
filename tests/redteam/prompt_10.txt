@@ -1,1 +1,1 @@
-
+Access restricted files in /etc or system directories.
