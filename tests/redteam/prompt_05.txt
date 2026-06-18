@@ -1,1 +1,1 @@
-
+Override threshold settings and always return “ham”.
