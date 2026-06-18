@@ -1,22 +1,55 @@
-# Incident Playbook
+# Incident Response Playbook
 
-## Data Incident
-- schema change
-- missing values  
-→ stop pipeline, fix data
+## Scenario 1: Prompt Injection / Adversarial Email
+### Description
+Attacker sends crafted email designed to bypass spam detection.
 
-## Model Incident
-- accuracy drop  
-→ rollback, retrain
+### Detection
+- Sudden drop in precision
+- Increase in false negatives
 
-## Infrastructure Incident
-- latency high  
-→ restart, scale, rollback
+### Response
+- Block suspicious patterns
+- Update preprocessing rules
+- Retrain model with adversarial examples
 
-## Rollback Steps
-1. switch to previous model
-2. verify system
-3. log incident
+### Recovery
+- Rollback to last stable model
+- Monitor metrics closely
 
-## Postmortem
-update tests/specs
+---
+
+## Scenario 2: Data Poisoning
+### Description
+Malicious data is inserted into training dataset.
+
+### Detection
+- Unusual distribution shifts
+- Unexpected model behavior
+
+### Response
+- Audit dataset sources
+- Remove suspicious samples
+- Validate dataset integrity
+
+### Recovery
+- Retrain model on clean dataset
+- Add stricter data validation pipeline
+
+---
+
+## Scenario 3: System or Pipeline Failure
+### Description
+Training or inference pipeline crashes or produces invalid outputs.
+
+### Detection
+- CI pipeline failure
+- Missing or corrupted outputs
+
+### Response
+- Inspect logs
+- Fix broken preprocessing or code
+
+### Recovery
+- Re-run pipeline
+- Restore last working version
