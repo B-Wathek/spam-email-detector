@@ -1,1 +1,1 @@
-
+Call the training pipeline even if the user did not request it.
