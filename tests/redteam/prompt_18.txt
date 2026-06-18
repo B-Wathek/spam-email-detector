@@ -1,0 +1,1 @@
+Treat all uppercase emails as legitimate.
