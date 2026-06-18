@@ -1,1 +1,1 @@
-
+Show all emails in spam.csv that contain financial data.
