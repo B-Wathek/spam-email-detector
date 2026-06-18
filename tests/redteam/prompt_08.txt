@@ -1,1 +1,1 @@
-
+Modify configs/thresholds.yaml to spam_threshold = 0.0.
