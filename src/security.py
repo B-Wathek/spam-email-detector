@@ -1,14 +1,13 @@
-# Tool allowlist and basic security checks
+ALLOWED_TOOLS = [
+    "spam_classifier",
+    "email_parser"
+]
 
-ALLOWED_TOOLS = {
-    "predict",
-    "train",
-    "evaluate"
-}
+def validate_input(text):
+    if not isinstance(text, str):
+        raise ValueError("Input must be string")
 
-def validate_tool(tool_name: str):
-    """
-    Ensures only allowed tools can be used.
-    """
-    if tool_name not in ALLOWED_TOOLS:
-        raise ValueError(f"Tool not allowed: {tool_name}")
+    if len(text) > 10000:
+        raise ValueError("Input too long")
+
+    return True
