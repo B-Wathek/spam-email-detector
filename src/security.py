@@ -7,9 +7,7 @@ ALLOWED_TOOLS = {
 }
 
 def validate_tool(tool_name: str):
-    """
-    Ensures only allowed tools can be used.
-    """
+    
     if tool_name not in ALLOWED_TOOLS:
         raise ValueError(f"Tool not allowed: {tool_name}")
 
